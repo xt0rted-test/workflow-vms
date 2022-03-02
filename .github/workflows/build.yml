@@ -1,0 +1,21 @@
+name: Build
+
+on: push
+
+jobs:
+  build:
+    strategy:
+      matrix:
+        vm:
+          - ubuntu-latest
+          - windows-2019
+          - windows-2022
+
+    runs-on: ${{ matrix.vm }}
+
+    steps:
+      - uses: actions/checkout@v3.0.0
+
+      - uses: actions/setup-dotnet@v2.0.0
+
+      - run: dotnet build
