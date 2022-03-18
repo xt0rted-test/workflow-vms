@@ -18,4 +18,8 @@ jobs:
 
       - uses: actions/setup-dotnet@v2.0.0
 
-      - run: dotnet build
+      - run: dotnet tool restore
+
+      - run: dotnet r info
+
+      - run: dotnet r build
