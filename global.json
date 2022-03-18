@@ -1,5 +1,11 @@
 {
   "sdk": {
     "version": "6.0.200"
+  },
+  "scripts": {
+    "build": "dotnet build",
+    "info": "dotnet r dotnet:version && dotnet r dotnet:info",
+    "dotnet:info": "dotnet --info",
+    "dotnet:version": "dotnet --version"
   }
 }
